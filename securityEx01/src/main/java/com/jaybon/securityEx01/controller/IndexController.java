@@ -1,6 +1,9 @@
 package com.jaybon.securityEx01.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -58,6 +61,13 @@ public class IndexController {
 		user.setRole("ROLE_USER");
 		userRepository.save(user);
 		return "redirect:/";
+	}
+	
+	//@PreAuthorize("hasRole('ROLE_MANAGER')") 구버전
+	@Secured("ROLE_MANAGER") // 신버전
+	@GetMapping("/manager")
+	public @ResponseBody String manager() {
+		return "매니저 페이지입니다";
 	}
 
 }
