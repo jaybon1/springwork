@@ -25,7 +25,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService{
 			// TODO: handle exception
 		}
 				
-		return super.loadUser(userRequest); // 이때 세션에 등록된다 OAuth2User
+		return oAuth2User; // 이때 세션에 등록된다 OAuth2User
 	}
 	
 	private OAuth2User processOAuth2User(OAuth2UserRequest userRequest, OAuth2User oAuth2User) {

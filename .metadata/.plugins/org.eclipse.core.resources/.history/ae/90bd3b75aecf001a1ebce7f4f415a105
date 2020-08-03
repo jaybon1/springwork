@@ -1,7 +1,0 @@
-package com.cos.blog.controller.dto;
-
-public class PostDetailRespDto {
-	
-	
-
-}

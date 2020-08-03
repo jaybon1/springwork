@@ -1,8 +1,0 @@
-package com.cos.blog.controller.dto;
-
-// 웬만하면 콤포지션 하지말기!!
-// 필드명을 그냥 적기!!
-
-public class PostDetailRespDto {
-
-}
