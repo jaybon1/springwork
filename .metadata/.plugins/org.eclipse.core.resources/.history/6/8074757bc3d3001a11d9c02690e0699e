@@ -1,0 +1,5 @@
+package com.jaybon.springStudy.config;
+
+public class DataAccessConfig {
+
+}

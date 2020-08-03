@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.jaybon.securityEx01.config;
+
+/**
+ * @author admin
+ *
+ */
+public class SecurityConfig {
+
+}

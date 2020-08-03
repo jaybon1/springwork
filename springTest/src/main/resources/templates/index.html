@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>타임리프 페이지 입니다.</h1>
+	<div th:each="user : ${users}">
+	
+	<div th:text="${user.getUsername()}"></div>
+	
+	</div>
+</body>
+</html>

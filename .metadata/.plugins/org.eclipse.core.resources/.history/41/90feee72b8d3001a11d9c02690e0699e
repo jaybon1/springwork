@@ -1,0 +1,5 @@
+package com.jaybon.mySecurityTest.config;
+
+public class SocialType {
+
+}

@@ -1,0 +1,22 @@
+package com.jaybon.securityEx01.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+@Configuration // IoC 빈(bean, 인스턴스)을 등록
+@EnableWebSecurity // 필터 체인 관리 시작 어노테이션
+@EnableGlobalMethodSecurity(prePostEnabled = true) // 컨트롤러 접근 전에 낚아챔, 특정 주소 접근시 권한 및 인증 미리체크
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+			.antMatchers("/user/**", "/admin**") 
+			.authenticated(); // 포즈티브 방식 (막아야될것만 막고 나머지는 다인증)
+			.anyRequest()
+			.permitAll() // 슬래시 주소로 가는 것은 인증 없이 동작 된다
+	}
+}
+

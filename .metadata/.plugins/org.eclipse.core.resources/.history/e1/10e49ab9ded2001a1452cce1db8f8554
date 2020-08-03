@@ -1,0 +1,5 @@
+package com.jaybon.securityEx01.repository;
+
+public interface UserRepository {
+
+}

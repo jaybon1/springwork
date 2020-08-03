@@ -1,0 +1,7 @@
+package com.jaybon.securityEx01.config.auth;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public class PrincipalDetailsService implements UserDetailsService{
+
+}

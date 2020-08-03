@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.blog.repository.PostRepository">
+  
+  <insert id="save">
+  	INSERT INTO post(title, content, userId, createDate) VALUES(#{title}, #{content}, #{userId}, now())
+  </insert>
+  
+  <select id="findAll" resultType="com.cos.blog.model.Post">
+  	SELECT id,title,content,userId,createDate FROM post ORDER BY id DESC
+  </select>
+  
+  <select id="findById" resultType="com.cos.blog.controller.dto.PostDetailRespDto">
+  	select p.id, p.title, p.content, u.username
+	from post p inner join user u
+	on p.userId = u.id
+  </select>
+  
+</mapper>
+

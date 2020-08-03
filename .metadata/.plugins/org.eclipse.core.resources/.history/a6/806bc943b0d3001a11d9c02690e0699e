@@ -1,0 +1,5 @@
+package com.jaybon.mySecurityTest.model;
+
+public class User {
+
+}
