@@ -1,75 +1,54 @@
-# 스프링 시큐리티 기본 V1
+# 스프링 시큐리티 OAuth2.0 V2
 
+- 페이스북, 구글 로그인 및 기본 시큐리티 연동
 
+### 스프링 시큐리티 기본 V1 참고
 
-### MySQL DB 및 사용자 생성
+- https://github.com/jaybon1/springwork/tree/master/securityEx01
 
-```sql
-create user 'cos'@'%' identified by 'cos1234';
-GRANT ALL PRIVILEGES ON *.* TO cos@'%';
-create database security;
-use security;
+### JPA method names 참고
+
+![blog](https://postfiles.pstatic.net/MjAyMDA4MDRfMTU1/MDAxNTk2NTA2ODAyMTgx.Qoff6FQ1RJyGw83meuDXT5J5e-Ac1WwSJMH2wf1l1Swg.KinVePXqdUOeyDYYRp4aguwTsxF0OBQB64LNUYTJRRgg.PNG.getinthere/Screenshot_26.png?type=w773)
+
+### application.yml 설정
+
+```yml
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .mustache
+
+  jpa:
+    hibernate:
+      ddl-auto: update #create update none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google: # /oauth2/authorization/google 이 주소를 동작하게 한다.
+            client-id: 머시기머시기
+            client-secret: 머시기머시기
+            scope:
+              - email
+              - profile
 ```
-
-
-
-
-
-### SecurityConfig.java에서 권한 설정방법
-
-```java
-// SecurityConfig 에서  configure(HttpSecurity http) 함수 권한 설정법
-
-//			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')") // access() 권한 .hasAnyRole()
-//			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') and hasRole('ROLE_USER')")
-			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
-```
-
-
-
-
-
-### 특정 주소 접근시 권한 및 인증( Controller 세팅 )
-
-```java
-// SecurityConfig 에 어노테이션 작성
-    
-@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
-
-    
-    // IndexController.java 에 어노테이션 작성
-    
-	//@PreAuthorize("hasRole('ROLE_MANAGER')") 구버전
-	@Secured("ROLE_MANAGER") // 신버전
-	@GetMapping("/manager")
-	public @ResponseBody String manager() {
-		return "매니저 페이지입니다";
-	}
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
