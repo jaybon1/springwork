@@ -61,7 +61,8 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService{
 			System.out.println("구글과 페이스북만 가능");
 		}
 		
-		Optional<User> userOptional = userRepository.findByEmail(oAuth2UserInfo.getEmail());
+		Optional<User> userOptional 
+			= userRepository.findByProviderAndProviderId(oAuth2UserInfo.getProvider(), oAuth2UserInfo.getProviderId());
 		
 		User user;
 		if(userOptional.isPresent()) {

@@ -27,4 +27,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	// SELECT * FROM user WHERE email =?1
 	Optional<User> findByEmail(String email);
 	
+	// SELECT * FROM user WHERE provider =?1 AND providerId =?2
+	Optional<User> findByProviderAndProviderId(String provider, String ProviderId);
+	
 }
