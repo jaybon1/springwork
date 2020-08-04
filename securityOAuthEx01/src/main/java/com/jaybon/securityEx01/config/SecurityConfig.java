@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.csrf().disable(); // csrf 비활성화
 		
 		http.authorizeRequests()
-			.antMatchers("/user/**").authenticated()// authenticated() 인증
+			.antMatchers("/user/**").authenticated() // authenticated() 인증
 //			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')") // access() 권한 .hasAnyRole()
 //			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') and hasRole('ROLE_USER')")
 			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.defaultSuccessUrl("/") // 성공하면 해당 주소로 이동 / 슬래시만 달면 이전 주소로 이동
 		.and()
 			.oauth2Login()
-			.loginPage("/loginForm")
+			.loginPage("/login")
 			.userInfoEndpoint()
 			.userService(principalOauth2UserService);
 	}

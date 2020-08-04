@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.jaybon.securityEx01.config.auth.PrincipalDetails;
 import com.jaybon.securityEx01.config.oauth.provider.FacebookUserInfo;
 import com.jaybon.securityEx01.config.oauth.provider.GoogleUserInfo;
+import com.jaybon.securityEx01.config.oauth.provider.NaverUserInfo;
 import com.jaybon.securityEx01.config.oauth.provider.OAuth2UserInfo;
 import com.jaybon.securityEx01.model.User;
 import com.jaybon.securityEx01.repository.UserRepository;
@@ -57,10 +58,13 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService{
 			oAuth2UserInfo = new GoogleUserInfo(oAuth2User.getAttributes());
 		} else if(userRequest.getClientRegistration().getRegistrationId().equals("facebook")) {
 			oAuth2UserInfo = new FacebookUserInfo(oAuth2User.getAttributes());
+		} else if(userRequest.getClientRegistration().getRegistrationId().equals("naver")) {
+			oAuth2UserInfo = new NaverUserInfo(oAuth2User.getAttributes());
 		} else {
-			System.out.println("구글과 페이스북만 가능");
+			System.out.println("구글, 페이스북, 네이버만 가능");
 		}
 		
+
 		Optional<User> userOptional 
 			= userRepository.findByProviderAndProviderId(oAuth2UserInfo.getProvider(), oAuth2UserInfo.getProviderId());
 		

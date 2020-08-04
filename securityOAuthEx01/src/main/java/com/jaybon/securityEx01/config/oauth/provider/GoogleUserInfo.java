@@ -4,15 +4,15 @@ import java.util.Map;
 
 public class GoogleUserInfo implements OAuth2UserInfo{
 	
-	private Map<String, Object> attrubutes;
+	private Map<String, Object> attributes;
 
 	public GoogleUserInfo(Map<String, Object> attrubutes) {
-		this.attrubutes = attrubutes;
+		this.attributes = attrubutes;
 	}
 
 	@Override
 	public String getProviderId() {
-		return (String) attrubutes.get("sub");
+		return (String) attributes.get("sub");
 	}
 
 	@Override
@@ -22,11 +22,11 @@ public class GoogleUserInfo implements OAuth2UserInfo{
 
 	@Override
 	public String getEmail() {
-		return (String) attrubutes.get("email");
+		return (String) attributes.get("email");
 	}
 
 	@Override
 	public String getName() {
-		return (String) attrubutes.get("name");
+		return (String) attributes.get("name");
 	}
 }

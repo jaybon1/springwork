@@ -9139,3 +9139,102 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 12:01:08.942
 !MESSAGE executing callback sts4.classpath.XhiaGjZN SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2020-08-04 12:27:20.644
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:34:40.781
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XhiaGjZN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:34:40.781
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.XhiaGjZN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:34:40.781
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:34:40.781
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XhiaGjZN => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:42.936
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:42.936
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@63782ad0[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=631)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:42.936
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.646
+!MESSAGE Boot LS startup time from start to initialized: 1694ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.678
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qgosvdtbisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.678
+!MESSAGE subscribing to classpath changes: sts4.classpath.qgosvdtb isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.678
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.678
+!MESSAGE subsribers = {sts4.classpath.qgosvdtb=Send Classpath Notifications(363)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE project securityOAuthEx01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE project blog ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE Preparing classpath changed notification securityOAuthEx01
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE project blog SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.693
+!MESSAGE project mySecurityTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.709
+!MESSAGE project mySecurityTest SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.724
+!MESSAGE classpath=128 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.724
+!MESSAGE project springStudy ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.724
+!MESSAGE project springStudy SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.724
+!MESSAGE buffering callback sts4.classpath.qgosvdtb securityOAuthEx01 false 128
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.724
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.724
+!MESSAGE executing callback sts4.classpath.qgosvdtb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.740
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qgosvdtb => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 13:39:44.771
+!MESSAGE executing callback sts4.classpath.qgosvdtb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 15:18:09.080
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qgosvdtb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 15:18:09.081
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.qgosvdtb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 15:18:09.082
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-04 15:18:09.083
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qgosvdtb => OK

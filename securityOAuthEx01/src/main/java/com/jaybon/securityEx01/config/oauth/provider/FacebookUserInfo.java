@@ -4,29 +4,29 @@ import java.util.Map;
 
 public class FacebookUserInfo implements OAuth2UserInfo{
 	
-	private Map<String, Object> attrubutes;
+	private Map<String, Object> attributes;
 
 	public FacebookUserInfo(Map<String, Object> attrubutes) {
-		this.attrubutes = attrubutes;
+		this.attributes = attrubutes;
 	}
 
 	@Override
 	public String getProviderId() {
-		return (String) attrubutes.get("id");
+		return (String) attributes.get("id");
 	}
 
 	@Override
 	public String getProvider() {
-		return "google";
+		return "facebook";
 	}
 
 	@Override
 	public String getEmail() {
-		return (String) attrubutes.get("email");
+		return (String) attributes.get("email");
 	}
 
 	@Override
 	public String getName() {
-		return (String) attrubutes.get("name");
+		return (String) attributes.get("name");
 	}
 }
