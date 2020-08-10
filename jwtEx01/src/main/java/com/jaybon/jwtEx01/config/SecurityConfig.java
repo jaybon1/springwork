@@ -1,28 +1,16 @@
 package com.jaybon.jwtEx01.config;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Component;
 
-import com.jaybon.jwtEx01.config.auth.principalDetailsService;
 import com.jaybon.jwtEx01.config.jwt.JwtAuthenticationFilter;
 import com.jaybon.jwtEx01.config.jwt.JwtAuthorizationFilter;
-import com.jaybon.jwtEx01.model.User;
 import com.jaybon.jwtEx01.repository.UserRepository;
 
 @Configuration

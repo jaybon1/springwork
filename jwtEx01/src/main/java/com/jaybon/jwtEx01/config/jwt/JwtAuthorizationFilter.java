@@ -77,45 +77,35 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter{
 					.getClaim("username").asString(); // asString을 사용하여 클레임의 내용을 가져온다
 			
 			// 1번방식
-//			System.out.println(username);
-//			
-//			if (username != null) {
-////				AuthenticationManager authenticationManager = getAuthenticationManager(); // 매니저 가져오기
-//				
-//				System.out.println("userRepository " + userRepository);
-//				
-//				User user = userRepository.findByUsername(username);
-//				
-//				PrincipalDetails principal = new PrincipalDetails(user);
-//				
-//				System.out.println("user "+user);
-//				
-//				UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
-//						new UsernamePasswordAuthenticationToken(
-//								user.getUsername(), 
-//								null, // 로그인할 할 것이 아니기 때문에 비번을 넣을 필요가 없다
-//								principal.getAuthorities());
-//				
-//				Authentication authentication = usernamePasswordAuthenticationToken;
-//				
-//				// 서명하고 끝내려고 하기 때문에 로그인 할 필요가 없다. 그래서 매니저 사용안함 
-////				Authentication authentication 
-////					= authenticationManager.authenticate(usernamePasswordAuthenticationToken);
-////				
-//				System.out.println("authentication");
-//				
-//				// 세션저장공간
-//				// principalDetailsService를 자동 호출(?)
-//				SecurityContextHolder.getContext().setAuthentication(authentication);
-//				
-//				System.out.println("SecurityContextHolder");
-//				
-//			}
-			// 1번방식 끝
+			System.out.println(username);
 			
- 			// 2번방식 끝
-			if(username != null) {
+			if (username != null) {
+//				AuthenticationManager authenticationManager = getAuthenticationManager(); // 매니저 가져오기
+				
+				System.out.println("userRepository " + userRepository);
+				
 				User user = userRepository.findByUsername(username);
+				
+				PrincipalDetails principal = new PrincipalDetails(user);
+				
+				System.out.println("user "+user);
+				
+				UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
+						new UsernamePasswordAuthenticationToken(
+								user.getUsername(), 
+								null, // 로그인할 할 것이 아니기 때문에 비번을 넣을 필요가 없다
+								principal.getAuthorities());
+				
+				Authentication authentication = usernamePasswordAuthenticationToken;
+				
+				// 서명하고 끝내려고 하기 때문에 로그인 할 필요가 없다. 그래서 매니저 사용안함 
+//				Authentication authentication 
+//					= authenticationManager.authenticate(usernamePasswordAuthenticationToken);
+				
+				
+//				// 11
+				System.out.println("authentication");
+				
 				SessionUser sessionUser = SessionUser.builder()
 						.id(user.getId())
 						.username(user.getUsername())
@@ -124,7 +114,29 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter{
 						
 				HttpSession session = request.getSession();
 				session.setAttribute("sessionUser", sessionUser);
+				// 11
+				
+				// 세션저장공간
+				SecurityContextHolder.getContext().setAuthentication(authentication);
+				
+				System.out.println("SecurityContextHolder");
+				
 			}
+			// 1번방식 끝
+			
+			
+ 			// 2번방식 끝
+//			if(username != null) {
+//				User user = userRepository.findByUsername(username);
+//				SessionUser sessionUser = SessionUser.builder()
+//						.id(user.getId())
+//						.username(user.getUsername())
+//						.roles(user.getRoleList())
+//						.build();
+//						
+//				HttpSession session = request.getSession();
+//				session.setAttribute("sessionUser", sessionUser);
+//			}
 			// 2번방식 끝
 			
 			// 3번방식
