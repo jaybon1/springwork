@@ -1,5 +1,0 @@
-package com.jaybon.mySecurityTest.config;
-
-public class CustomOAuth2Provider {
-
-}

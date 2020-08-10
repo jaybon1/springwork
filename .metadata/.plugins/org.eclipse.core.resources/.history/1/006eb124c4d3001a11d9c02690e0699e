@@ -1,5 +1,0 @@
-package com.jaybon.springStudy.repository;
-
-public interface UserRepository {
-	
-}

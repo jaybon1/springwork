@@ -1,5 +1,0 @@
-package com.jaybon.mySecurityTest.service;
-
-public class CustomOAuth2UserService {
-
-}

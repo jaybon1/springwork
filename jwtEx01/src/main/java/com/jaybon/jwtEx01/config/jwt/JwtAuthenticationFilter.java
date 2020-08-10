@@ -28,6 +28,7 @@ import lombok.RequiredArgsConstructor;
 public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
 	
 	private final AuthenticationManager authenticationManager;
+
 	
 	// attemptAuthentication 인증 요청시에 실행되는 함수 / doFilter 필터에 걸면 요청시마다 무조건실행됨
 	// /login일때 실행됨

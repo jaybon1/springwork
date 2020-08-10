@@ -4,9 +4,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.hibernate.annotations.Target;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jaybon.jwtEx01.config.auth.PrincipalDetails;
-import com.jaybon.jwtEx01.config.auth.SessionUser;
 import com.jaybon.jwtEx01.model.User;
 import com.jaybon.jwtEx01.repository.UserRepository;
 
@@ -36,12 +34,14 @@ public class RestApiController {
 		return "<h1>home</h1>";
 	}
 	
+	// (Authentication authentication, HttpSession session)
 	@GetMapping("user")
-	public String user(HttpSession session) {
-		SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
-		System.out.println("principal : "+sessionUser.getId());
-		System.out.println("principal : "+sessionUser.getUsername());
-		System.out.println("principal : "+sessionUser.getRoles());
+	public String user(Authentication authentication) {
+		PrincipalDetails principal = (PrincipalDetails) authentication.getPrincipal();
+		System.out.println("principal : "+principal.getUser().getId());
+		System.out.println("principal : "+principal.getUser().getUsername());
+		System.out.println("principal : "+principal.getUser().getPassword());
+		
 		return "<h1>user</h1>";
 	}
 	

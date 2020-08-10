@@ -1,27 +1,0 @@
-server:
-  port: 8080
-  servlet:    context-path: /
-    encoding:      charset: utf-8
-      enabled: true
-      force: true
-
-spring:  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
-    
-      jpa:
-    hibernate:
-      ddl-auto: update #create update none 3개 중 하나 선택
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true
-    
-custom:
-  oauth2: 
-    kakao: 
-      client-id: 88a081241234cfacbedef7018ac451316f3 
-      client-secret: jpXULoEzrasfawegsqYXlRLyyOHn2i60q 
-    naver: 
-      client-id: B5yvH3Zaweyawerawwe6repj4z0L 
-      client-secret: sArXFasdfawef

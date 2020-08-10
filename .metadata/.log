@@ -14168,3 +14168,207 @@ java.lang.NullPointerException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:09.078
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.IKdkTyPl
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:09.079
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.IKdkTyPl
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:09.080
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:09.081
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.IKdkTyPl => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:11.207
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:11.209
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@398072c6[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=631)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:11.210
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.406
+!MESSAGE Boot LS startup time from start to initialized: 2194ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.434
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EcxgQvvrisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.436
+!MESSAGE subscribing to classpath changes: sts4.classpath.EcxgQvvr isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.437
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.438
+!MESSAGE subsribers = {sts4.classpath.EcxgQvvr=Send Classpath Notifications(5057)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.439
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.440
+!MESSAGE project jwtEx01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.442
+!MESSAGE Preparing classpath changed notification jwtEx01
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.442
+!MESSAGE project Springboot-Security-JWT ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.443
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.444
+!MESSAGE project Springboot-Security-JWT SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.445
+!MESSAGE project blog ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.448
+!MESSAGE project blog SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.450
+!MESSAGE project mySecurityTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.452
+!MESSAGE project mySecurityTest SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.455
+!MESSAGE classpath=118 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.456
+!MESSAGE project securityOAuthEx01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.460
+!MESSAGE buffering callback sts4.classpath.EcxgQvvr jwtEx01 false 118
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.462
+!MESSAGE project securityOAuthEx01 SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.463
+!MESSAGE executing callback sts4.classpath.EcxgQvvr 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.466
+!MESSAGE project springStudy ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.471
+!MESSAGE project springStudy SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.472
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.474
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EcxgQvvr => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 16:50:13.487
+!MESSAGE executing callback sts4.classpath.EcxgQvvr SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:56.941
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.EcxgQvvr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:56.942
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.EcxgQvvr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:56.944
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:56.945
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.EcxgQvvr => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:58.419
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:58.421
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@398072c6[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=631)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:04:58.422
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.712
+!MESSAGE Boot LS startup time from start to initialized: 2289ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.743
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uMnWYKtBisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.745
+!MESSAGE subscribing to classpath changes: sts4.classpath.uMnWYKtB isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.747
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.748
+!MESSAGE subsribers = {sts4.classpath.uMnWYKtB=Send Classpath Notifications(5768)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.749
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.750
+!MESSAGE project jwtEx01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.751
+!MESSAGE Preparing classpath changed notification jwtEx01
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.752
+!MESSAGE project Springboot-Security-JWT ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.753
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.754
+!MESSAGE project Springboot-Security-JWT SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.756
+!MESSAGE project blog ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.762
+!MESSAGE project blog SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.763
+!MESSAGE project mySecurityTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.764
+!MESSAGE project mySecurityTest SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.765
+!MESSAGE project securityOAuthEx01 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.767
+!MESSAGE project securityOAuthEx01 SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.773
+!MESSAGE project springStudy ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.778
+!MESSAGE classpath=118 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.779
+!MESSAGE project springStudy SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.782
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.783
+!MESSAGE buffering callback sts4.classpath.uMnWYKtB jwtEx01 false 118
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.784
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uMnWYKtB => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.785
+!MESSAGE executing callback sts4.classpath.uMnWYKtB 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:05:00.810
+!MESSAGE executing callback sts4.classpath.uMnWYKtB SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:08:05.163
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.uMnWYKtB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:08:05.165
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.uMnWYKtB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:08:05.166
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-10 18:08:05.167
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.uMnWYKtB => OK

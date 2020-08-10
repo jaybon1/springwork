@@ -1,13 +1,22 @@
 package com.jaybon.jwtEx01.config;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.access.AccessDeniedHandler;
 
 import com.jaybon.jwtEx01.config.jwt.JwtAuthenticationFilter;
 import com.jaybon.jwtEx01.config.jwt.JwtAuthorizationFilter;
@@ -42,6 +51,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/api/v1/user/**").access("hasRole('ROLE_USER') or hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')")
 			.antMatchers("/api/v1/manager/**").access("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')")
 			.antMatchers("/api/v1/admin/**").access("hasRole('ROLE_ADMIN')")
-			.anyRequest().permitAll();
+			.anyRequest().permitAll()
+			.and()
+			.exceptionHandling()
+			.accessDeniedHandler(new AccessDeniedHandler() { //액세스 디나이드 핸들러!
+				
+				@Override
+				public void handle(HttpServletRequest request, HttpServletResponse response,
+						AccessDeniedException accessDeniedException) throws IOException, ServletException {
+					PrintWriter out = 
+							response.getWriter();
+					out.print("<script>location.href='/login';</script>");
+					return;
+				}
+			});
 	}
 }
