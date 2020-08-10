@@ -2,6 +2,10 @@ package com.jaybon.jwtEx01.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jaybon.jwtEx01.config.auth.PrincipalDetails;
+import com.jaybon.jwtEx01.config.auth.SessionUser;
 import com.jaybon.jwtEx01.model.User;
 import com.jaybon.jwtEx01.repository.UserRepository;
 
@@ -29,9 +35,19 @@ public class RestApiController {
 		return "<h1>home</h1>";
 	}
 	
+	@GetMapping("user")
+	public String user(HttpSession session) {
+		SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+		System.out.println("principal : "+sessionUser.getId());
+		System.out.println("principal : "+sessionUser.getUsername());
+		System.out.println("principal : "+sessionUser.getRoles());
+		return "<h1>user</h1>";
+	}
+	
 	// 매니저 또는 어드민이 접근 가능
 	@GetMapping("manager/reports")
-	public String reports() {
+	public String reports(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+
 		return "<h1>reports</h1>";
 	}
 	

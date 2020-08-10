@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -87,12 +88,12 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 		// JWT토큰을 만든다 . 클레임 삽입
 		String jwtToken = JWT.create()
 				.withSubject(principalDetails.getUsername())
-				.withExpiresAt(new Date(System.currentTimeMillis() + 864000000))
+				.withExpiresAt(new Date(System.currentTimeMillis() + JwtProperties.EXPIRATION_TIME)) // 만료시간
 				.withClaim("id", principalDetails.getUser().getId()) // 비공개 클레임
 				.withClaim("username", principalDetails.getUsername()) // 비공개 클레임
-				.sign(Algorithm.HMAC512("조익현".getBytes())); // getBytes로 바꿔주면 좀 더 안전
+				.sign(Algorithm.HMAC512(JwtProperties.SECRET.getBytes())); // getBytes로 바꿔주면 좀 더 안전
 				
-		response.addHeader("Authorization", "Bearer "+jwtToken);
+		response.addHeader(JwtProperties.HEADER_STRING, JwtProperties.TOKEN_PREFIX+jwtToken);
 		System.out.println("토큰을 헤더에 넣음");
 //		super.successfulAuthentication(request, response, chain, authResult);
 	}

@@ -23,6 +23,9 @@ public class principalDetailsService implements UserDetailsService {
 		User user = userRepository.findByUsername(username);
 		if(user != null) {
 			System.out.println("해당 유저를 찾았어요");
+			System.out.println(user.getUsername());
+			System.out.println(user.getPassword());
+			System.out.println(user.getRoles());
 		}
 		return new PrincipalDetails(user);
 	}
