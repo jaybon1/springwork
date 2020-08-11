@@ -85,30 +85,28 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter{
 //			if (username != null) {
 ////				AuthenticationManager authenticationManager = getAuthenticationManager(); // 매니저 가져오기
 //				
-//				System.out.println("userRepository " + userRepository);
-//				
+//				// 유저네임으로 리파지토리에서 유저 정보가져오기
 //				User user = userRepository.findByUsername(username);
 //				
+//				// UserDetails 타입으로 변환
 //				PrincipalDetails principal = new PrincipalDetails(user);
 //				
-//				System.out.println("user "+user);
-//				
+//				// usernamePasswordAuthenticationToken 토큰만들기
 //				UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
 //						new UsernamePasswordAuthenticationToken(
 //								user.getUsername(), 
 //								null, // 로그인할 할 것이 아니기 때문에 비번을 넣을 필요가 없다
 //								principal.getAuthorities());
 //				
+//				// 매니저를 사용하지 않고 바로 Authentication화 시켜버린다.
 //				Authentication authentication = usernamePasswordAuthenticationToken;
 //				
 //				// 서명하고 끝내려고 하기 때문에 로그인 할 필요가 없다. 그래서 매니저 사용안함 
 ////				Authentication authentication 
 ////					= authenticationManager.authenticate(usernamePasswordAuthenticationToken);
 //				
-//				// 세션저장공간
+//				// 세션저장공간에 Authentication을 넣는다
 //				SecurityContextHolder.getContext().setAuthentication(authentication);
-//				
-//				System.out.println("SecurityContextHolder");
 //				
 //			}
 			// 1번방식 끝
@@ -122,10 +120,9 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter{
 //						.username(user.getUsername())
 //						.roles(user.getRoleList())
 //						.build();
-//						
+//				
 //				HttpSession session = request.getSession();
 //				session.setAttribute("sessionUser", sessionUser);
-//				SecurityContextHolder.getContext().setAuthentication(authentication);
 //			}
 			// 2번방식 끝
 			
@@ -142,12 +139,16 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter{
 				PrincipalDetails principalDetails = new PrincipalDetails(user);
 				Authentication authentication =
 						new UsernamePasswordAuthenticationToken(
-								principalDetails, //나중에 컨트롤러에서 DI해서 쓸 때 사용하기 편함.
+								principalDetails, //나중에 컨트롤러에서 DI해서 쓸 때 사용하기 편함.(인증하는거 아니니까 유저네임이 아닌 유저객체를 넣어도 무방)
 								null, // 패스워드는 모르니까 null 처리, 어차피 지금 인증하는게 아니니까!!
 								principalDetails.getAuthorities());
 				
 				// 강제로 시큐리티의 세션에 접근하여 값 저장
 				SecurityContextHolder.getContext().setAuthentication(authentication);
+				
+//				HttpSession session = request.getSession();
+//				session.setAttribute("sessionUser", user); // 템플릿을 찾을 경우 사용해도된다.(sessionScope.user)
+				
 			}
 			// 4번방식
 			
