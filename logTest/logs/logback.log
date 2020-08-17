@@ -1,0 +1,6 @@
+[2020-08-17 14:31:03:227603][http-nio-8080-exec-2] ERROR c.j.l.config.aop.warn.BindingAdvice - 에러
+[2020-08-17 14:31:03:227603][http-nio-8080-exec-2] WARN  c.j.l.config.aop.warn.BindingAdvice - com.jaybon.logTest.controller.IndexController : user() 패스워드가 공백일 수 없습니다
+[2020-08-17 14:31:03:227603][http-nio-8080-exec-2] ERROR c.j.l.config.aop.warn.BindingAdvice - 에러
+[2020-08-17 14:31:03:227603][http-nio-8080-exec-2] WARN  c.j.l.config.aop.warn.BindingAdvice - com.jaybon.logTest.controller.IndexController : user() 올바른 형식의 이메일 주소여야 합니다
+[2020-08-17 14:31:03:227603][http-nio-8080-exec-2] ERROR c.j.l.config.aop.warn.BindingAdvice - 에러
+[2020-08-17 14:31:03:227603][http-nio-8080-exec-2] WARN  c.j.l.config.aop.warn.BindingAdvice - com.jaybon.logTest.controller.IndexController : user() 유저네임의 길이가 10자를 초과할 수 없습니다
