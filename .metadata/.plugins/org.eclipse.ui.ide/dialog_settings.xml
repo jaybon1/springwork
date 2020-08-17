@@ -53,6 +53,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\src\springwork\springTest"/>
 			<item value="C:\src\springwork\securityEx01"/>
 			<item value="C:\src\springwork\Springboot-Security-JWT"/>
 			<item value="C:\src\springwork\securityOAuthEx01"/>

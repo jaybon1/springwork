@@ -34,12 +34,6 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService{
 		System.out.println("userRequest"+userRequest.getAccessToken().getTokenValue()); // 코드 토큰 유저정보
 		System.out.println("userRequest"+userRequest.getClientRegistration()); // 코드 토큰 유저정보
 		System.out.println(oAuth2User); // 토큰을 통해 응답받은 회원정보
-		
-		try {
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
 				
 		return processOAuth2User(userRequest, oAuth2User); // 이때 세션에 등록된다 OAuth2User
 	}
