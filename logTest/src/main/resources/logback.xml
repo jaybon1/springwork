@@ -26,7 +26,7 @@
     	<appender-ref ref="STDOUT" />
     </root>
     
-<!--     warn 설정시 warn info debug가 저장된다 -->
+<!--     warn 설정시 warn 이상 위험도 로그가 저장된다 -->
     <logger name="com.jaybon.logTest.config.aop.warn" level="WARN">
         <appender-ref ref="FILE" />
     </logger>
