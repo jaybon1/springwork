@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jaybon</groupId>
-	<artifactId>livere</artifactId>
+	<artifactId>orianna</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>livere</name>
+	<name>orianna</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -20,10 +20,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mustache</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,6 +42,14 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<!-- 오리아나 -->
+		<dependency>
+			<groupId>com.merakianalytics.orianna</groupId>
+			<artifactId>orianna</artifactId>
+			<version>4.0.0-rc7</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
