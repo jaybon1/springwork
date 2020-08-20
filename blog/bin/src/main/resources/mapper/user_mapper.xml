@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.blog.repository.UserRepository">
+  <select id="findById" resultType="com.cos.blog.model.User">
+    select * from user WHERE id = #{id}
+  </select>
+  
+  <!-- 컬렉션이어도 resultType에 클래스를 넣자  -->
+  <select id="findAll" resultType="com.cos.blog.model.User">
+    select * from user;
+  </select>
+  
+    <!-- 컬렉션이어도 resultType에 클래스를 넣자  -->
+  <select id="login" resultType="com.cos.blog.model.User">
+    SELECT id, username, email, profile, role, createDate FROM user WHERE username = #{username} and password = #{password};
+  </select>
+  
+  <!-- 함수명 적고 리절트타입 없으니 안적는다  -->
+  <insert id="save">
+  	INSERT INTO user(username, password, email, role, createDate) VALUES(#{username}, #{password}, #{email}, #{role}, now())
+  </insert>
+  
+</mapper>
