@@ -1,6 +1,7 @@
 content_assist_autoactivation=true
 content_assist_autoactivation_delay=0
 content_assist_autoactivation_triggers_java=.$\=<qwertyuiopasdfghjlkzxcvbnmQWERTYUIOPASDFGHJLKZXCVBNM
+content_assist_category_order=org.eclipse.wst.jsdt.ui.defaultProposalCategory\:65535\u0000org.eclipse.wst.jsdt.ui.templateProposalCategory\:1\u0000tern.eclipse.ide.jsdt.ui.TernCompletionProposalCategory\:65537\u0000org.eclipse.wst.jsdt.ui.javaNoTypeProposalCategory\:65538\u0000org.eclipse.wst.jsdt.ui.textProposalCategory\:65539\u0000org.eclipse.wst.jsdt.ui.genericProposalCategory\:65540\u0000
 eclipse.preferences.version=1
 fontPropagated=true
 org.eclipse.jface.textfont=1|Fixedsys Excelsior 3.01|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|0|3|2|1|34|Fixedsys Excelsior 3.01;
