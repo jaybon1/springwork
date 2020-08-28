@@ -23,12 +23,11 @@ import lombok.NoArgsConstructor;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
     @Column(unique = true)
     private String username; // provider_providerId
-    
     private String password; // 암호화
     private String email;
     private String roles;

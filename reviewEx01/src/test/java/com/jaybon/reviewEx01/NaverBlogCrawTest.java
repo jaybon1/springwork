@@ -33,5 +33,8 @@ public class NaverBlogCrawTest {
 			e.printStackTrace();
 		}
 		
+		// http://hare.kr/222065140009
+		// https://search.naver.com/search.naver?where=post&sm=tab_jum&query=%EA%B0%A4%EB%9F%AD%EC%8B%9C20
+		
 	}
 }
