@@ -16,18 +16,16 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 217574025.index
 1730131592.index
 3898661182.index
+2594433738.index
 1285958192.index
 1383478659.index
 3009750584.index
 3791780728.index
 3649410175.index
-4097756347.index
 3552605836.index
 2147976587.index
 2158205419.index
-2590214456.index
 3669025912.index
-3338048637.index
 936765557.index
 2254571451.index
 3517082146.index
@@ -57,13 +55,11 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 2444736535.index
 2924524562.index
 106471606.index
-1664382954.index
 2003658041.index
 4276758565.index
 4210021660.index
 1811170085.index
 2476351216.index
-4270126303.index
 788307242.index
 679004495.index
 1900101422.index
@@ -79,7 +75,6 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 878551043.index
 3695963624.index
 718896522.index
-4138189476.index
 2022573751.index
 2401977238.index
 2380668758.index
@@ -87,7 +82,6 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 2474508739.index
 4111303905.index
 3711229561.index
-1428655510.index
 2336207972.index
 2878125523.index
 3854876143.index
@@ -101,7 +95,6 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 576052546.index
 4140622486.index
 1872987079.index
-3412775171.index
 4019319407.index
 918861935.index
 4112470857.index
@@ -111,15 +104,12 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 4230231407.index
 1438115187.index
 2070338031.index
-3419272701.index
 1048908201.index
-4163204921.index
 1137604699.index
 1674065843.index
 1144482116.index
 1535526637.index
 2328565464.index
-3909691915.index
 2209243995.index
 2956616646.index
 2408722386.index
@@ -149,7 +139,6 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 249197521.index
 408771512.index
 2269002077.index
-453527648.index
 873290393.index
 1700392539.index
 3055188959.index
@@ -165,7 +154,6 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 4151710137.index
 3509557062.index
 4255466333.index
-1165458586.index
 1478940865.index
 2422837888.index
 2923218292.index
@@ -178,7 +166,6 @@ INDEX VERSION 1.131+C:\src\springwork\.metadata\.plugins\org.eclipse.jdt.core
 1301684271.index
 1394449307.index
 1991871987.index
-3689361228.index
 2657212575.index
 741416789.index
 3392638511.index
