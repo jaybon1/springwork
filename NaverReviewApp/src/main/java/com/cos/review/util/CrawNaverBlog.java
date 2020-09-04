@@ -16,32 +16,36 @@ public class CrawNaverBlog {
 	public String dayParse(String rawDay) {
 		
 		String parseDay = "";
-	
-		if(rawDay.contains("분 전") ||rawDay.contains("시간 전")) {
-			
-			return LocalDate.now().toString();
-			
-		} else if(rawDay.contains("일 전")) {
-			
-			parseDay = rawDay.replace("일 전", "");
-			LocalDate today = LocalDate.now();
-			return today.minusDays(Integer.parseInt(parseDay)).toString();
-			
-		} else if(rawDay.contains("어제")) {
-			
-			LocalDate today = LocalDate.now();
-			return today.minusDays(1).toString();
-			
-		} else if(!rawDay.contains("-")) {
-			
-			parseDay = rawDay.substring(0, 4)+"-"+rawDay.substring(4, 7)+"-"+rawDay.substring(7);
-			
-			return parseDay.replace(".", "");
-			
-		} else if(rawDay.contains(".")) {
-			
-			return rawDay.replace(".", "");
-			
+		
+		try {
+			if(rawDay.contains("분 전") ||rawDay.contains("시간 전")) {
+				
+				return LocalDate.now().toString();
+				
+			} else if(rawDay.contains("일 전")) {
+				
+				parseDay = rawDay.replace("일 전", "");
+				LocalDate today = LocalDate.now();
+				return today.minusDays(Integer.parseInt(parseDay)).toString();
+				
+			} else if(rawDay.contains("어제")) {
+				
+				LocalDate today = LocalDate.now();
+				return today.minusDays(1).toString();
+				
+			} else if(!rawDay.contains("-")) {
+				
+				parseDay = rawDay.substring(0, 4)+"-"+rawDay.substring(4, 7)+"-"+rawDay.substring(7);
+				
+				return parseDay.replace(".", "");
+				
+			} else if(rawDay.contains(".")) {
+				
+				return rawDay.replace(".", "");
+				
+			}
+		} catch (Exception e) {
+			return rawDay;
 		}
 		
 		return parseDay;
@@ -58,7 +62,7 @@ public class CrawNaverBlog {
 		
 		List<Product> products = new ArrayList<>();
 		
-		while (products.size() < 1001) {
+		while (products.size() < 2) {
 			
 			String url = "https://search.naver.com/search.naver?date_from=&date_option=0&date_to=&dup_remove=1&nso=&post_blogurl=&post_blogurl_without=&query="+keyword+"&sm=tab_pge&srchby=all&st=sim&where=post&start="+start;
 			
