@@ -18,7 +18,7 @@ import com.cos.review.model.Product;
 // 섬네일, 블로그주소, 제목, 날짜
 public class NaverBlogCrawTest {
 
-	@Test
+	//@Test
 	public void dayParse() {
 		
 		String type1 = "45분 전";
@@ -50,13 +50,13 @@ public class NaverBlogCrawTest {
 		
 	}
 	
-//	@Test
+	@Test
 	public void 제품리뷰_블로그_크롤링() {
 		int start = 1; //10씩 증가하면 됨.
 		
 		List<Product> products = new ArrayList<>();
 		
-		while (products.size() < 1001) {
+		while (products.size() < 1) {
 			
 			String url = "https://search.naver.com/search.naver?date_from=&date_option=0&date_to=&dup_remove=1&nso=&post_blogurl=&post_blogurl_without=&query=%EA%B0%A4%EB%9F%AD%EC%8B%9C20&sm=tab_pge&srchby=all&st=sim&where=post&start="+start;
 			

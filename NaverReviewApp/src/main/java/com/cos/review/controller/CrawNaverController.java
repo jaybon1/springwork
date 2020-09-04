@@ -61,7 +61,7 @@ public class CrawNaverController {
 		
 		productRepository.saveAll(products);
 		
-		return "성공";
+		return "ok";
 	}
 	
 	@PostMapping("/craw/keyword/proc")
