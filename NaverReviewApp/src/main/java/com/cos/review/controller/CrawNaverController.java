@@ -1,6 +1,7 @@
 package com.cos.review.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +26,24 @@ public class CrawNaverController {
 	
 	@Autowired
 	private SearchKeywordRepository searchKeywordRepository;
+	
+	
+	@GetMapping("/searchKeyword")
+	public @ResponseBody List<SearchKeyword>searchKeyword(){
+		return searchKeywordRepository.findAll();
+	}
+	
+	@GetMapping({"/product", "/product/", "/product/{keywordId}"})
+	public @ResponseBody List<Product> product(@PathVariable Optional<Integer> optionalKeywordId){
+		
+		if(optionalKeywordId.isPresent()) {
+			return productRepository.findByKeywordId(optionalKeywordId.get());
+		} else {
+			return productRepository.findByKeywordId(1);
+		}
+		
+	}
+	
 	
 	@GetMapping("/craw/naver")
 	public String crawNaver(Model model) {
